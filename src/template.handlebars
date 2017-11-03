@@ -1,18 +1,23 @@
+## Table of Contents
 {{#each files}}
-{{#if filename}}
-### `{{filename}}`
-
-{{/if}}
 {{#each components}}
-{{#if displayName}}**{{displayName}}** {{/if}}{{#if description}}{{description}}{{/if}}
-{{#if props}}
+{{#if displayName}}* [{{displayName}}{{/if}}](#displayName)
+{{/each}}
+{{/each}}
 
+{{#each files}}
+{{#each components}}
+{{#if displayName}}### {{displayName}}{{/if}}
+{{#if description}}{{description}}{{/if}}
+{{#if filename}}`{{filename}}`{{/if}}
+
+{{#if props}}
 Property | Type | Required | Description
 :--- | :--- | :--- | :---
 {{#each props}}
 {{@key}}|{{#if type}}PropType {{type.name}}{{/if}}{{#if flowType}}FlowType {{flowType.name}}{{/if}}|{{#if required}}yes{{/if}}|{{description}}
 {{/each}}
 {{/if}}
-{{/each}}
 
+{{/each}}
 {{/each}}

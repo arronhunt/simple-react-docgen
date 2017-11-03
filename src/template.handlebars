@@ -15,7 +15,7 @@
 Property | Type | Required | Description
 :--- | :--- | :--- | :---
 {{#each props}}
-{{@key}}|{{#if type}}PropType {{type.name}}{{/if}}{{#if flowType}}FlowType {{flowType.name}}{{/if}}|{{#if required}}yes{{/if}}|{{description}}
+{{@key}}|{{#if type}}{{type.name}}{{/if}}{{#if flowType}}FlowType {{flowType.name}}{{/if}}|{{#if required}}yes{{/if}}|{{description}}
 {{/each}}
 {{/if}}
 

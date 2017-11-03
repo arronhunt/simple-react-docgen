@@ -12,10 +12,10 @@
 {{#if filename}}`{{filename}}`{{/if}}
 
 {{#if props}}
-Property | Type | Required | Description
-:--- | :--- | :--- | :---
+Property | Type | Default | Required | Description
+:--- | :--- | :--- | :--- | :---
 {{#each props}}
-{{@key}}|{{#if type}}{{type.name}}{{/if}}{{#if flowType}}FlowType {{flowType.name}}{{/if}}|{{#if required}}yes{{/if}}|{{description}}
+{{@key}}|{{#if type}}{{type.name}}{{/if}}{{#if flowType}}FlowType {{flowType.name}}{{/if}}|{{#if defaultValue}}{{defaultValue.value}}{{/if}}|{{#if required}}yes{{/if}}|{{description}}
 {{/each}}
 {{/if}}
 
